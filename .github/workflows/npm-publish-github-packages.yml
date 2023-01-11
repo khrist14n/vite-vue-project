@@ -35,7 +35,7 @@ jobs:
       - name: Change to gh pages
         run: |
           git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
-          cd ${GITHUB_WORKSPACE}/vite-react-project && npm run deploy -- -u "github-actions-bot <support+actions@github.com>"
+          cd ${GITHUB_WORKSPACE}/vite-vue-project && npm run deploy -- -u "github-actions-bot <support+actions@github.com>"
         env:
           GITHUB_TOKEN: ${{ secrets.SECRET_GITHUB_TOKEN }}
           GITHUB_REPOSITORY: ${{github.repository}}
